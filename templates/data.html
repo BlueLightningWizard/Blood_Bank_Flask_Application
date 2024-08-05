@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='/images/Blood_Bank_Icon.ico')}}">
+
+    <title>
+        Blood Bank | Registered Donors
+    </title>
+</head>
+
+<body style="background-image: url('static/images/Blood_Bank_Background.jpg'); background-size: cover; margin: 0 0 0">
+
+    <p style="background-color: pink; color:darkred; text-align: center; font: bold 50px serif, Times New Roman">
+        <img src="{{url_for('static', filename='/images/Blood_Bank_Logo.png')}}" width="106.5" height="86.25">
+        Registered Donors
+    </p>
+
+    <table style="background-color: pink; border: solid 4px darkred; text-align: center; border-radius: 10px; border-spacing: 20px;"
+        align="center">
+        <thead style="font-size: 20px; padding: 10px">
+
+            <th> ID </th>
+            <th> First Name </th>
+            <th> Middle Name </th>
+            <th> Last Name </th>
+            <th> Blood Group </th>
+
+        </thead>
+
+        {% for donor in data %}
+        <tbody style="font-size: 20px;">
+
+            <td>{{donor.ID}}</td>
+            <td>{{donor.First_Name}}</td>
+            <td>{{donor.Middle_Name}}</td>
+            <td>{{donor.Last_Name}}</td>
+            <td>{{donor.Blood_Group}}</td>
+
+        </tbody>
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

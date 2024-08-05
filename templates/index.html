@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='/images/Blood_Bank_Icon.ico')}}">
+
+    <title>
+        Blood Bank | Registered Donors
+    </title>
+</head>
+
+<body style="background-image: url('static/images/Blood_Bank_Background.jpg'); background-size: cover; margin: 0 0 0">
+
+    <p style="background-color: pink; color:darkred; text-align: center; font: bold 50px serif, Times New Roman">
+        <img src = "{{url_for('static', filename='/images/Blood_Bank_Logo.png')}}" width = "106.5" height = "86.25">
+        Add Donor
+    </p>
+
+    <form method="post" action="/add_data" method="POST" style="text-align:center; background-color: pink; border-radius: 20px">
+        <br>
+
+        <div class="mb-3">
+            <label for="First Name" class="form-label">First Name</label>
+            <input class="form-control" name="first">
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="Middle Name" class="form-label">Middle Name</label>
+            <input class="form-control" name="middle">
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="Last Name" class="form-label">Last Name</label>
+            <input class="form-control" name="last">
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="Blood Group" class="form-label">Blood Group</label>
+            <input class="form-control" name="blood_group">
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email">
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <br><br>
+
+    </form>
+
+</body>
+
+</html>
